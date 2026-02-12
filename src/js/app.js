@@ -1,7 +1,9 @@
 import "./parts/menu.js";
 import "./parts/sliders.js";
 import { toTop } from "./static/to-top.js";
+import { list } from "./parts/list.js";
 toTop();
+list()
 
 document.addEventListener('click', function (e) {
     let targetEl = e.target;

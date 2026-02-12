@@ -22,11 +22,11 @@ if (sliders.length) {
 
             new Swiper('.areas-text', {
                 modules: [
-                    Thumbs, Pagination
+                    Thumbs, Navigation
                 ],
-                pagination: {
-                    el: pagination,
-                    clickable: true,
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
                 },
                 slidesPerView: 1,
                 spaceBetween: 10,
