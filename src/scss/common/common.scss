@@ -246,9 +246,19 @@ b {}
     transform: translate(40px, 0) rotate(45deg);
     pointer-events: none;
 
+    @media (max-width:1440px) {
+        right: 20px;
+        bottom: 20px;
+    }
+
     &._active {
         opacity: 1;
         transform: translate(0, 0) rotate(0deg);
         pointer-events: all;
+    }
+
+    @media (max-width:1024px) {
+        right: 10px;
+        bottom: 10px;
     }
 }
