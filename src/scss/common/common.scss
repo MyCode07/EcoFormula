@@ -6,10 +6,9 @@ body {
     scroll-behavior: smooth;
     font-style: normal;
     letter-spacing: normal;
-    // font-family: "TTFirsNeue";
-    font-family: "TT Firs Neue";
+    font-family: "Inter";
     color: $black;
-    font-size: 16px;
+    @include adaptive-value('font-size', 24, 16, 1);
     line-height: normal;
     font-weight: 400;
     background-color: $white;
@@ -43,6 +42,65 @@ main {
         max-width: none;
         padding-inline: $padding + px;
     }
+
+    @media (max-width:1440px) {
+        padding-inline: 20px;
+    }
+
+    @media (max-width:768px) {
+        padding-inline: 10px;
+    }
+}
+
+h1 {
+    @include adaptive-value('font-size', 66, 26, 1);
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+._title-label {
+    display: block;
+    margin-bottom: 10px;
+    color: $accent;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 100%;
+
+    @media (max-width:1024px) {
+        font-size: 16px;
+    }
+
+    @media (max-width:768px) {
+        font-size: 14px;
+    }
+}
+
+h2 {
+    @include adaptive-value('font-size', 56, 28, 1);
+    font-style: normal;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    @media (max-width:768px) {
+        margin-bottom: 15px;
+    }
+
+    span {
+        color: $grey
+    }
+}
+
+h3 {
+    @include adaptive-value('font-size', 32, 22, 1);
+    line-height: 110%;
+}
+
+._big-text {
+    @include adaptive-value('font-size', 60, 20, 1);
+    font-weight: 400;
+    line-height: 110%;
 }
 
 img,
@@ -62,3 +120,134 @@ figure {
 
 strong,
 b {}
+
+._btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 10px;
+    height: 60px;
+    padding-inline: 30px;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+
+    @media (max-width:1024px) {
+        height: 50px;
+        border-radius: 4px;
+        font-size: 14px;
+        padding-inline: 20px;
+    }
+
+    // ._btn-blackstroke
+    &-blackstroke {
+        color: $black;
+        border: 1px solid rgba($color: $black, $alpha: 0.2);
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $black;
+            }
+        }
+    }
+
+    // ._btn-accent
+    &-accent {
+        background-color: $accent;
+        color: $white;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+._social-buttons {
+    a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $softblue;
+        transition: all 0.3s ease 0s;
+
+        img,
+        svg,
+        picture {
+            width: 20px;
+            height: 20px;
+            fill: $black;
+            transition: all 0.3s ease 0s;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $accent;
+
+                img,
+                svg,
+                picture {
+                    fill: $white;
+                }
+            }
+        }
+    }
+}
+
+._desktop {
+    @media (max-width:1024px) {
+        display: none;
+    }
+}
+
+._mobile {
+    @media (min-width:1025px) {
+        display: none;
+    }
+}
+
+.to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba($color: $black, $alpha: 0.1);
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgba($color: $black, $alpha: 0.2);
+        }
+    }
+
+    img,
+    svg,
+    picture {
+        width: 16px;
+        height: 16px;
+        pointer-events: none;
+    }
+
+    position: fixed;
+    z-index: 10;
+    right: 40px;
+    bottom: 140px;
+    opacity: 0;
+    transform: translate(40px, 0) rotate(45deg);
+    pointer-events: none;
+
+    &._active {
+        opacity: 1;
+        transform: translate(0, 0) rotate(0deg);
+        pointer-events: all;
+    }
+}

@@ -1,0 +1,66 @@
+.form {
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+        padding: 30px;
+        padding-left: 0;
+        border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
+        transition: all 0.3s ease 0s;
+
+        @media (max-width:1024px) {
+            padding: 20px;
+            padding-left: 0;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: $black;
+            }
+        }
+    }
+
+    textarea {
+        height: 140px;
+        resize: none;
+
+        @media (max-width:1024px) {
+            height: 100px;
+        }
+    }
+
+    p {
+        margin-top: 40px;
+        color: $grey;
+        font-size: 16px;
+
+        @media (max-width:1024px) {
+            margin-top: 30px;
+        }
+
+        @media (max-width:768px) {
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: underline;
+            transition: color 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    button {
+        margin-top: 60px;
+
+        @media (max-width:1024px) {
+            margin-top: 40px;
+            width: 100%;
+        }
+    }
+}

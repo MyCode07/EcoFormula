@@ -19,7 +19,7 @@ document.addEventListener('click', function (e) {
         }
     }
 
-    if (targetEl.classList.contains('menu-close')) {
+    if (targetEl.classList.contains('menu__close')) {
         burger.classList.remove('_active');
         menu.classList.remove('_open');
         unLockPadding();
@@ -30,8 +30,5 @@ document.addEventListener('click', function (e) {
         menu.classList.remove('_open');
         unLockPadding();
     }
-
-    if (targetEl.classList.contains('flip-lang') || targetEl.classList.contains('current-lang')) {
-        targetEl.closest('.lang').classList.toggle('_open');
-    }
+ 
 })
