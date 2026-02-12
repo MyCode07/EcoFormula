@@ -9,6 +9,7 @@ body {
     font-family: "Inter";
     color: $black;
     @include adaptive-value('font-size', 24, 16, 1);
+    letter-spacing: -1%;
     line-height: normal;
     font-weight: 400;
     background-color: $white;
