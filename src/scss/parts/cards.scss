@@ -28,11 +28,6 @@
         display: flex;
         flex-direction: column;
         gap: 5px;
-        margin-bottom: 20px;
-
-        @media (max-width:1024px) {
-            margin-bottom: 10px;
-        }
 
         span {
             font-size: 18px;
@@ -48,9 +43,11 @@
             align-items: flex-end;
             gap: 4px;
             @include adaptive-value('font-size', 54, 36, 1);
+            line-height: 100%;
 
             label {
-                @include adaptive-value('padding-bottom', 10, 6, 1);
+                line-height: normal;
+                @include adaptive-value('padding-bottom', 10, 2, 1);
                 @include adaptive-value('font-size', 18, 16, 1);
             }
         }
@@ -61,20 +58,15 @@
         transition: all 0.5s ease 0s;
         pointer-events: none;
         width: 100%;
-        @include adaptive-value('height', 400, 200, 1);
+        @include adaptive-value('height', 500, 200, 1);
         object-fit: contain;
     }
 
     // .volume-card__bottom
     &__bottom {
-        margin-top: 40px;
         display: flex;
         flex-direction: column;
         gap: 10px;
-
-        @media (max-width:1024px) {
-            margin-top: 20px;
-        }
 
         span {
             font-size: 18px;

@@ -8,7 +8,8 @@
     &__body {
         &.grid {
             @media (max-width:1240px) {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
                 gap: 40px;
             }
         }
@@ -28,6 +29,10 @@
         p {
             max-width: 600px;
             width: 100%;
+
+            @media (max-width:425px) {
+                max-width: 100%;
+            }
         }
     }
 
@@ -56,6 +61,18 @@
                 padding-top: 20px;
             }
 
+            @media (max-width:768px) {
+                gap: 15px;
+            }
+
+            h3 {
+                @media (max-width:768px) {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
             span {
                 display: flex;
                 align-items: center;
@@ -67,6 +84,7 @@
                 font-size: 16px;
                 border: 1px solid rgba($color: $black, $alpha: 0.2);
                 color: $grey;
+                line-height: 100%;
 
                 @media (max-width:768px) {
                     font-size: 14px;
@@ -79,6 +97,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                padding-top: 7px;
 
                 @media (max-width:768px) {
                     gap: 10px;
@@ -86,6 +105,7 @@
 
                 p {
                     color: $grey;
+                    line-height: 130%;
                 }
             }
         }
@@ -251,6 +271,7 @@
         p {
             margin-top: 20px;
             color: $grey;
+            line-height: 130%;
 
             @media (max-width:1024px) {
                 margin-top: 10px;
@@ -317,7 +338,6 @@
 
         @media (max-width:1024px) {
             padding: 15px;
-            padding-top: 20px;
             border-radius: 10px;
             width: 100%;
             margin-bottom: 10px;
@@ -491,7 +511,7 @@
     }
 
     &-2 {
-        @include adaptive-value('margin-left', -190, -60, 1);
+        @include adaptive-value('margin-left', -190, -100, 1);
     }
 
     &-4 {

@@ -9,7 +9,6 @@ body {
     font-family: "Inter";
     color: $black;
     @include adaptive-value('font-size', 24, 16, 1);
-    letter-spacing: -1%;
     line-height: normal;
     font-weight: 400;
     background-color: $white;
@@ -96,6 +95,10 @@ h2 {
 h3 {
     @include adaptive-value('font-size', 32, 22, 1);
     line-height: 110%;
+}
+
+.subtitle {
+    line-height: 130%;
 }
 
 ._big-text {
@@ -260,5 +263,61 @@ b {}
     @media (max-width:1024px) {
         right: 10px;
         bottom: 10px;
+    }
+}
+
+._fullscreen-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.text-box {
+    h2 {
+        @include adaptive-value('margin-bottom', 60, 30, 1);
+    }
+
+    h3 {
+        @include adaptive-value('margin-bottom', 40, 20, 1);
+    }
+
+    h4 {
+        @include adaptive-value('margin-bottom', 20, 10, 1);
+    }
+
+    ol,
+    ul {
+        margin: 20px 0;
+    }
+
+    p {
+        max-width: 50%;
+        width: 100%;
+
+        @media (max-width:768px) {
+            max-width: 100%;
+        }
+
+        & > :not(:last-child) {
+            margin-bottom: 20px;
+
+            @media (max-width:768px) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    a {
+        text-decoration: underline;
+        transition: opacity 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
     }
 }
