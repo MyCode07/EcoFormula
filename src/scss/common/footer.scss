@@ -80,12 +80,19 @@
         flex-direction: column;
         gap: 15px;
 
+        @media (max-width:600px) {
+            width: 150%;
+        }
+
         a {
-            white-space: nowrap;
             font-size: 16px;
             font-weight: 400;
             text-transform: uppercase;
             transition: all 0.3s ease 0s;
+
+            &:not(:first-of-type) {
+                white-space: nowrap;
+            }
 
             @media (any-hover: hover) {
                 &:hover {
@@ -113,7 +120,7 @@
 
         @media (max-width:768px) {
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 10px;
         }
 
         a {
@@ -132,7 +139,7 @@
             }
 
             @media (max-width:1024px) {
-                margin-top: 20px;
+                margin-top: 40px;
             }
         }
     }
@@ -142,5 +149,10 @@
         flex-direction: column;
         gap: 15px;
         margin-left: auto;
+
+        @media (max-width:768px) {
+            justify-content: flex-end;
+            gap: 10px;
+        }
     }
 }

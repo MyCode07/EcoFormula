@@ -212,6 +212,16 @@
                 }
             }
 
+            &:first-child {
+
+                img,
+                picture {
+                    @media (max-width:768px) and (min-width: 541px) {
+                        object-fit: contain;
+                    }
+                }
+            }
+
             img,
             picture {
                 position: absolute;
@@ -529,6 +539,7 @@
         user-select: none;
         -webkit-user-select: none;
         cursor: grab;
+        overflow-y: hidden;
         overflow-x: auto;
         scroll-behavior: auto;
         /* Отключаем встроенный smooth */
@@ -564,21 +575,11 @@
             margin-inline: -10px;
         }
 
-        .content-top {
-            @include adaptive-value('margin-top', 88, 50, 1);
-            margin-left: -60px;
-
-            @media (max-width:1024px) {
-                margin-left: -40px;
-            }
-        }
-
-        .content-center {
-            @include adaptive-value('margin-top', 240, 140, 1);
-            margin-left: -70px;
-        }
-
         div {
+            flex: 0 0 auto;
+        }
+
+        label {
             position: relative;
             z-index: 1;
             display: flex;
@@ -607,6 +608,20 @@
                 font-size: 16px;
                 color: $grey;
             }
+        }
+
+        .content-top {
+            @include adaptive-value('margin-top', 88, 50, 1);
+            margin-left: -60px;
+
+            @media (max-width:1024px) {
+                margin-left: -40px;
+            }
+        }
+
+        .content-center {
+            @include adaptive-value('margin-top', 240, 140, 1);
+            margin-left: -70px;
         }
     }
 }

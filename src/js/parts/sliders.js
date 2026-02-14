@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination, FreeMode, Thumbs } from 'swiper/modules';
+import { Navigation, Autoplay, FreeMode, Thumbs } from 'swiper/modules';
 
 const sliders = document.querySelectorAll('.swiper');
 if (sliders.length) {
@@ -18,11 +18,14 @@ if (sliders.length) {
                 watchSlidesProgress: true,
                 slidesPerView: 1,
                 spaceBetween: 10,
+                allowTouchMove: false,
+                simulateTouch: false,
+
             });
 
             new Swiper('.areas-text', {
                 modules: [
-                    Thumbs, Navigation
+                    Thumbs, Navigation, Autoplay
                 ],
                 navigation: {
                     prevEl: prev,
@@ -33,31 +36,13 @@ if (sliders.length) {
                 thumbs: {
                     swiper: thumbs,
                 },
-            });
-        }
-
-        if (slider.closest('.reviews')) {
-            new Swiper(slider, {
-                modules: [
-                    Navigation
-                ],
-                spaceBetween: 16,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
-
-                breakpoints: {
-                    769: {
-                        slidesPerView: 4,
-                    },
-                    300: {
-                        slidesPerView: 2,
-                    }
+                allowTouchMove: false,
+                simulateTouch: false,
+                autoplay: {
+                    pauseOnMouseEnter: true,
+                    delay: 2000
                 }
             });
         }
-
-
     })
 }
