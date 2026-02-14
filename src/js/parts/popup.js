@@ -1,6 +1,3 @@
-import { lockPadding, unLockPadding } from "../utils/lockPadding.js";
-
-
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
 
@@ -11,7 +8,6 @@ document.addEventListener('click', function (e) {
 
         if (popup) {
             popup.classList.add('_open')
-            lockPadding();
         }
     }
 
@@ -29,5 +25,4 @@ document.addEventListener('click', function (e) {
 
 function closePopup(popup) {
     popup.classList.remove('_open')
-    unLockPadding();
 }

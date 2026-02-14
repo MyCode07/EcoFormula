@@ -479,6 +479,8 @@
         object-fit: cover;
         pointer-events: none;
         flex: 0 0 auto;
+        height: 100%;
+        width: 100%;
 
         @media (max-width:1024px) {
             border-radius: 10px;
