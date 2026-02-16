@@ -247,19 +247,6 @@
             position: relative;
             border-radius: 4px;
             overflow: hidden;
-
-            @media (max-width:1024px) {}
-
-            &:after {
-                position: absolute;
-                content: '';
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                mix-blend-mode: color;
-                background-color: $accent;
-            }
         }
     }
 
