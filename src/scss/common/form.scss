@@ -4,6 +4,10 @@
 
     // .form__item
     &__item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
         &._error {
 
             input,
@@ -19,16 +23,11 @@
 
     input,
     textarea {
-        padding: 30px;
-        padding-left: 0;
-        border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
+        padding: 20px;
         transition: all 0.3s ease 0s;
         width: 100%;
-
-        @media (max-width:1024px) {
-            padding: 18px;
-            padding-left: 0;
-        }
+        background-color: $softblue;
+        border: 1px solid rgba($color: $black, $alpha: 0);
 
         @media (any-hover: hover) {
             &:hover {
@@ -37,27 +36,18 @@
         }
     }
 
-    textarea {
-        height: 140px;
-        resize: none;
+    input {
+        height: 60px;
+    }
 
-        @media (max-width:1024px) {
-            height: 100px;
-        }
+    textarea {
+        height: 120px;
+        resize: none;
     }
 
     p {
-        margin-top: 40px;
+        margin-top: 20px;
         color: $grey;
-        font-size: 16px;
-
-        @media (max-width:1024px) {
-            margin-top: 30px;
-        }
-
-        @media (max-width:768px) {
-            font-size: 14px;
-        }
 
         a {
             text-decoration: underline;
@@ -72,11 +62,11 @@
     }
 
     button {
-        margin-top: 60px;
+        margin-top: 40px;
+        width: 100%;
 
         @media (max-width:1024px) {
-            margin-top: 40px;
-            width: 100%;
+            margin-top: 30px;
         }
     }
 

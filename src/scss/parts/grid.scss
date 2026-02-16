@@ -28,6 +28,25 @@
         }
     }
 
+    // .grid-4
+    &-4 {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+
+        @media (max-width:1440px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width:1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:500px) {
+            gap: 10px;
+            grid-template-columns: 1fr;
+        }
+    }
+
     // .grid-6
     &-6 {
         grid-template-columns: repeat(6, 1fr);

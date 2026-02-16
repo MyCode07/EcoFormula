@@ -8,10 +8,16 @@ body {
     letter-spacing: normal;
     font-family: "Inter";
     color: $black;
-    @include adaptive-value('font-size', 24, 16, 1);
     line-height: normal;
     font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.6px;
     background-color: $white;
+
+    @media (max-width:1024px) {
+        font-size: 16px;
+        letter-spacing: -0.8px;
+    }
 
     &._noscroll {
         overflow: hidden;
@@ -52,58 +58,73 @@ main {
     }
 }
 
+h1,
+h2,
+h3 {
+    span {
+        color: rgba($color: $black, $alpha: 0.4);
+    }
+}
+
 h1 {
-    @include adaptive-value('font-size', 66, 26, 1);
+    @include adaptive-value('font-size', 80, 28, 1);
+    @include adaptive-value('letter-spacing', -8, -2, 1);
     font-weight: 400;
-    line-height: 120%;
-    text-transform: uppercase;
+    line-height: 100%;
 }
 
 ._title-label {
-    display: block;
-    margin-bottom: 10px;
-    color: $accent;
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 200px;
+    border: 1px solid #D1D1D1;
+    font-size: 14px;
     font-weight: 400;
     line-height: 100%;
-
-    @media (max-width:1024px) {
-        font-size: 16px;
-    }
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    padding-bottom: 9px;
+    color: $accent;
 
     @media (max-width:768px) {
-        font-size: 14px;
+        padding: 10px 15px;
+        padding-bottom: 9px;
+        font-size: 12px;
+        letter-spacing: -0.4px;
     }
 }
 
 h2 {
-    @include adaptive-value('font-size', 56, 28, 1);
-    font-style: normal;
-    line-height: 120%;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-
-    @media (max-width:768px) {
-        margin-bottom: 15px;
-    }
-
-    span {
-        color: $grey
-    }
-}
-
-h3 {
-    @include adaptive-value('font-size', 32, 22, 1);
+    @include adaptive-value('font-size', 48, 24, 1);
+    @include adaptive-value('letter-spacing', -3, -1.7, 1);
+    font-weight: 400;
     line-height: 110%;
 }
 
+h3 {
+    @include adaptive-value('font-size', 24, 18, 1);
+    line-height: 120%;
+    letter-spacing: -1.3px;
+
+    @media (max-width:1024px) {
+        letter-spacing: -1px;
+    }
+}
+
 .subtitle {
+    color: $grey;
     line-height: 130%;
 }
 
 ._big-text {
-    @include adaptive-value('font-size', 60, 20, 1);
-    font-weight: 400;
+    @include adaptive-value('font-size', 70, 22, 1);
+    @include adaptive-value('letter-spacing', -6, -1.7, 1);
+    font-style: normal;
+    font-weight: 500;
     line-height: 110%;
 }
 
@@ -130,18 +151,16 @@ b {}
     align-items: center;
     justify-content: center;
     width: fit-content;
-    border-radius: 10px;
+    border-radius: 4px;
     height: 60px;
     padding-inline: 30px;
     white-space: nowrap;
-    font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
 
     @media (max-width:1024px) {
         height: 50px;
-        border-radius: 4px;
         font-size: 14px;
         padding-inline: 20px;
     }
@@ -224,12 +243,16 @@ b {}
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: rgba($color: $black, $alpha: 0.1);
-    transition: all 0.3s ease 0s;
+    background-color: #EAEAEA;
 
     @media (any-hover: hover) {
         &:hover {
-            background-color: rgba($color: $black, $alpha: 0.2);
+
+            img,
+            svg,
+            picture {
+                transform: scale(1.2);
+            }
         }
     }
 
@@ -239,6 +262,7 @@ b {}
         width: 16px;
         height: 16px;
         pointer-events: none;
+        transition: all 0.3s ease 0s;
     }
 
     position: fixed;

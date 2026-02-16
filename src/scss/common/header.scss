@@ -43,9 +43,7 @@
 
             a {
                 white-space: nowrap;
-                font-size: 16px;
-                font-weight: 400;
-                text-transform: uppercase;
+                font-weight: 500;
                 transition: all 0.3s ease 0s;
 
                 @media (any-hover: hover) {
@@ -102,14 +100,13 @@
     ._btn {
         margin-left: auto;
         height: 50px;
-        font-weight: 400;
+        text-transform:none;
 
         @media (max-width:1024px) {
             height: fit-content;
             border-radius: 0;
             padding: 0;
             border: unset;
-            font-size: 16px;
         }
     }
 }

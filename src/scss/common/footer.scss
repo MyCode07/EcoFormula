@@ -1,5 +1,11 @@
 .footer {
-    @include adaptive-value('margin-top', 140, 60, 1);
+    @media (min-width:769px) {
+        @include adaptive-value('margin-top', 140, 60, 1);
+    }
+
+    @media (max-width:768px) {
+        margin-top: 20px;
+    }
 
     // .footer__container
     &__container {}
@@ -18,7 +24,7 @@
         }
 
         @media (max-width:768px) {
-            gap: 60px;
+            gap: 20px;
         }
     }
 
@@ -29,7 +35,7 @@
         gap: 40px;
 
         @media (max-width:768px) {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
         }
 
         span {
@@ -44,10 +50,6 @@
         }
 
         nav {
-            @media (max-width:768px) {
-                grid-column: span 2;
-            }
-
             ul {
                 display: flex;
                 flex-direction: column;
@@ -59,10 +61,8 @@
 
                 a {
                     white-space: nowrap;
-                    font-size: 16px;
-                    font-weight: 400;
-                    text-transform: uppercase;
                     transition: all 0.3s ease 0s;
+                    font-weight: 500;
 
                     @media (any-hover: hover) {
                         &:hover {
@@ -80,15 +80,9 @@
         flex-direction: column;
         gap: 15px;
 
-        @media (max-width:600px) {
-            width: 150%;
-        }
-
         a {
-            font-size: 16px;
-            font-weight: 400;
-            text-transform: uppercase;
             transition: all 0.3s ease 0s;
+            font-weight: 500;
 
             &:not(:first-of-type) {
                 white-space: nowrap;
@@ -111,7 +105,7 @@
         padding-bottom: 40px;
         border-top: 1px solid rgba($color: $black, $alpha: 0.2);
         color: $grey;
-        font-size: 16px;
+        font-weight: 500;
 
         @media (max-width:1024px) {
             padding-top: 20px;
@@ -125,6 +119,7 @@
 
         a {
             transition: color 0.3s ease 0s;
+            white-space: nowrap;
 
             @media (any-hover: hover) {
                 &:hover {
@@ -138,8 +133,16 @@
                 text-align: right;
             }
 
-            @media (max-width:1024px) {
-                margin-top: 40px;
+            @media (max-width:768px) {
+                margin-top: 30px;
+            }
+        }
+
+        p {
+            &:last-child {
+                @media (min-width:769px) {
+                    text-align: right;
+                }
             }
         }
     }
@@ -151,7 +154,8 @@
         margin-left: auto;
 
         @media (max-width:768px) {
-            justify-content: flex-end;
+            margin-left: unset;
+            flex-direction: row;
             gap: 10px;
         }
     }

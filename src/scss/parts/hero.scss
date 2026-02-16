@@ -30,18 +30,22 @@
         }
 
         h1 {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             max-width: 1200px;
             width: 100%;
+
+            @media (max-width:1024px) {
+                margin-bottom: 20px;
+            }
         }
 
         .subtitle {
             margin-bottom: 60px;
-            max-width: 580px;
+            max-width: 390px;
             width: 100%;
 
             @media (max-width:1024px) {
-                margin-bottom: 30px;
+                margin-bottom: 40px;
             }
         }
 
@@ -71,28 +75,31 @@
                 padding-left: 30px;
                 border-left: 4px solid $accent;
                 font-size: 16px;
+                padding-top: 4;
 
                 @media (max-width:1024px) {
-                    gap: 20px;
                     padding-left: 15px;
                 }
 
+                @media (max-width:768px) {
+                    padding-left: 10px;
+                }
+
                 span {
-                    @media (min-width:768px) {
-                        br {
-                            display: none;
-                        }
+                    color: $grey;
+
+                    @media (max-width:768px) {
+                        font-size: 14px;
                     }
                 }
 
                 div {
                     display: flex;
                     align-items: center;
-                    gap: 15px;
-                    @include adaptive-value('font-size', 32, 26, 1);
+                    gap: 10px;
 
                     @media (max-width:1024px) {
-                        gap: 8px;
+                        gap: 5px;
                     }
 
                     p {
@@ -100,21 +107,20 @@
                         align-items: flex-end;
                         gap: 4px;
                         line-height: 100%;
-                    }
-
-                    span {
-                        @include adaptive-value('font-size', 24, 16, 1);
+                        @include adaptive-value('font-size', 32, 28, 1);
+                        line-height: 100%;
+                        letter-spacing: -2px;
                     }
 
                     label {
                         font-size: 18px;
-                        padding-bottom: 4px;
-                        color: $grey;
+                        letter-spacing: -0.6px;
+                        padding-bottom: 2px;
                         line-height: normal;
 
                         @media (max-width:1024px) {
                             font-size: 16px;
-                            padding-bottom: 2px;
+                            letter-spacing: -0.8px;
                         }
                     }
                 }

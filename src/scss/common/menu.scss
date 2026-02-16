@@ -43,8 +43,8 @@
         svg,
         picture {
             pointer-events: none;
-            width: 16px;
-            height: 16px;
+            width: 14px;
+            height: 14px;
         }
     }
 
@@ -63,6 +63,8 @@
                     padding-bottom: 15px;
                     border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
                     color: $black;
+                    font-size: 22px;
+                    letter-spacing: -2px;
                 }
             }
         }
