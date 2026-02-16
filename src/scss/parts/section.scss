@@ -486,8 +486,7 @@
             min-width: 340px;
             height: fit-content;
             width: 100%;
-            @include adaptive-value('font-size', 24, 16, 1);
-            @include adaptive-value('letter-spacing:', -1.6, -0.8, 1);
+            @include adaptive-value('letter-spacing', -1.6, -0.8, 1);
 
             @media (max-width:1024px) {
                 padding: 20px;
@@ -500,6 +499,13 @@
 
             span {
                 color: $grey;
+                @include adaptive-value('font-size', 22, 14, 1);
+            }
+
+            p {
+                font-weight: 500;
+                line-height: 110%;
+                @include adaptive-value('font-size', 24, 16, 1);
             }
         }
 

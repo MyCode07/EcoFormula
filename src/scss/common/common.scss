@@ -247,7 +247,6 @@ b {}
 
     @media (any-hover: hover) {
         &:hover {
-
             img,
             svg,
             picture {
@@ -268,7 +267,7 @@ b {}
     position: fixed;
     z-index: 10;
     right: 40px;
-    bottom: 140px;
+    bottom: 80px;
     opacity: 0;
     transform: translate(40px, 0) rotate(45deg);
     pointer-events: none;
@@ -282,11 +281,6 @@ b {}
         opacity: 1;
         transform: translate(0, 0) rotate(0deg);
         pointer-events: all;
-    }
-
-    @media (max-width:1024px) {
-        right: 10px;
-        bottom: 10px;
     }
 }
 

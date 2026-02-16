@@ -136,7 +136,6 @@
             object-fit: cover;
 
             @media (max-width:1024px) {
-                object-fit: contain;
                 @include adaptive-value('margin-top', -150, 0, 1);
             }
 
