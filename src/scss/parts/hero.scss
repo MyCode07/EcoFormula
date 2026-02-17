@@ -17,7 +17,7 @@
         padding-bottom: 40px;
 
         @media (min-width:1025px) {
-            min-height: 780px;
+            min-height: 800px;
             justify-content: space-between;
         }
 
@@ -159,6 +159,7 @@
         top: unset;
         bottom: 0;
         height: calc(100% + 90px + 40px + 40px);
+        max-height: 933px;
 
         @media (max-width:1440px) {
             height: 100%;

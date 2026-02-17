@@ -63,9 +63,9 @@ h3 {
 
 h1 {
     @include adaptive-value('font-size', 74, 28, 1);
-    @include adaptive-value('letter-spacing', -8, -2, 1);
+    @include adaptive-value('letter-spacing', -6.8, -2, 1);
     font-weight: 400;
-    line-height: 100%;
+    line-height: 104%;
 }
 
 ._title-label {
@@ -95,9 +95,9 @@ h1 {
 
 h2 {
     @include adaptive-value('font-size', 42, 24, 1);
-    @include adaptive-value('letter-spacing', -3, -1.7, 1);
+    @include adaptive-value('letter-spacing', -2.25, -1.7, 1);
     font-weight: 400;
-    line-height: 110%;
+    line-height: 112%;
 }
 
 h3 {
