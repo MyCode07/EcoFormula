@@ -10,14 +10,9 @@ body {
     color: $black;
     line-height: normal;
     font-weight: 400;
-    font-size: 18px;
-    letter-spacing: -0.6px;
     background-color: $white;
-
-    @media (max-width:1024px) {
-        font-size: 16px;
-        letter-spacing: -0.8px;
-    }
+    font-size: 16px;
+    letter-spacing: -0.8px;
 
     &._noscroll {
         overflow: hidden;
@@ -67,7 +62,7 @@ h3 {
 }
 
 h1 {
-    @include adaptive-value('font-size', 80, 28, 1);
+    @include adaptive-value('font-size', 74, 28, 1);
     @include adaptive-value('letter-spacing', -8, -2, 1);
     font-weight: 400;
     line-height: 100%;
@@ -99,7 +94,7 @@ h1 {
 }
 
 h2 {
-    @include adaptive-value('font-size', 48, 24, 1);
+    @include adaptive-value('font-size', 42, 24, 1);
     @include adaptive-value('letter-spacing', -3, -1.7, 1);
     font-weight: 400;
     line-height: 110%;
@@ -158,10 +153,10 @@ b {}
     font-weight: 500;
     text-transform: uppercase;
     transition: all 0.3s ease 0s;
+    font-size: 14px;
 
     @media (max-width:1024px) {
         height: 50px;
-        font-size: 14px;
         padding-inline: 20px;
     }
 
@@ -236,6 +231,10 @@ b {}
     }
 }
 
+.swiper-button-lock {
+    display: none !important;
+}
+
 .to-top {
     display: flex;
     align-items: center;
@@ -247,6 +246,7 @@ b {}
 
     @media (any-hover: hover) {
         &:hover {
+
             img,
             svg,
             picture {

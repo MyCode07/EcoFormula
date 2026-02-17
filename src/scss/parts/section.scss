@@ -189,6 +189,14 @@
                 }
             }
 
+            &:has(img) {
+                p {
+                    @media (max-width:1024px) {
+                        max-width: 75%;
+                    }
+                }
+            }
+
             img,
             picture {
                 position: absolute;
@@ -481,7 +489,7 @@
             padding: 24px;
             border-radius: 30px;
             background: #F6F9FF;
-            min-height: 228px;
+            min-height: 200px;
             max-width: 340px;
             min-width: 340px;
             height: fit-content;
@@ -499,7 +507,7 @@
 
             span {
                 color: $grey;
-                @include adaptive-value('font-size', 22, 14, 1);
+                @include adaptive-value('font-size', 18, 14, 1);
             }
 
             p {
